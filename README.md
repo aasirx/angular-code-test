@@ -1,28 +1,54 @@
 # AngularCodeTest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
-## Development server
+## 过程记录
+### 2017.12.26
+1.测试angular使用引入jquery获取html中一个元素id并且在component里面调用$('#id').click();
+#### 安装的步骤
++ Install jquery with npm
+```
+    npm install jquery --save
+```
++ Add typings
+```
+    npm install --save-dev @types/jquery
+```
++ Add scripts to angular-cli.json
+```
+    "apps": [{
+        ...
+        "scripts": [
+            "../node_modules/jquery/dist/jquery.min.js",
+        ],
+        ...
+}]
+```
++ 在component中添加引用
+```
+    declare var jquery:any; declare var $ :any;
+```
+[参考地址](https://stackoverflow.com/questions/43934727/how-to-use-jquery-plugin-with-angular-4)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2.在github上面建立一个仓库在上传的时候传不上去
++ 首先复制在github上面地址
++ 然后在命令行中添加git的远程仓库,提交代码到远程库
+```
+    git remote add origin https://github.com/yyicon/angular-code-test.git
+    git push -u origin master
+```
++ 因为在本地创建项目的时候也创建了.md文件，在github上面创建repositories也创建了，所以就push不上去，使用 -f 强制提交
+```
+    git push -u origin master -f
+```
+[参考地址](https://www.jianshu.com/p/e9dd2849cfb0)
 
-## Code scaffolding
+3.在vscode中使用markdown
++ 安装 **Markdown Preview Enhanced** 插件
++ 熟悉markdown语法
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+4.未完成的
+- [ ] 图片上传显示
 
-## Build
+[参考地址1 用vscode写markdown的正确姿势](http://blog.csdn.net/u013597671/article/details/77914638)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[参考地址2: Markdown，你只需要掌握这几个](https://www.cnblogs.com/jpfss/articles/6567686.html)
