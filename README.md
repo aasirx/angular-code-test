@@ -31,6 +31,7 @@
 
 2.在github上面建立一个仓库在上传的时候传不上去
 + 首先复制在github上面地址
+![](https://github.com/yyicon/angular-code-test/raw/master/src/assets/img/2017-12-26_234446.png)
 + 然后在命令行中添加git的远程仓库,提交代码到远程库
 ```
     git remote add origin https://github.com/yyicon/angular-code-test.git
@@ -47,7 +48,7 @@
 + 熟悉markdown语法
 
 4.未完成的
-- [ ] 图片上传显示
+- [x] 图片上传显示
 
 [参考地址1 用vscode写markdown的正确姿势](http://blog.csdn.net/u013597671/article/details/77914638)
 
